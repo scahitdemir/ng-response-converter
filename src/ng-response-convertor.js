@@ -21,9 +21,9 @@
         }
       }
       else {
-        _data = allKeysChange(data.response);
+        _data = allKeysChange(data);
       }
-      
+
       return _data;
     }
 
