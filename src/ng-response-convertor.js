@@ -3,7 +3,7 @@
 
   var moduleResponseConvertor = angular.module('ng-response-convertor', []);
 
-  moduleResponseConvertor.service('ng-response-convertor', function () {
+  moduleResponseConvertor.service('ngResponseConvertor', function () {
 
     var _model = {};
 

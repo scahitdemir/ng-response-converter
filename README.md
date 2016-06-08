@@ -1,4 +1,4 @@
-# ng-response-convertor
+# Ng-Response-Convertor
 
 This angular service, shortened field names which sent by backend are being converted to original names according to specified directory.
 
@@ -21,13 +21,42 @@ $ bower install ng-response-convertor --save
 1. Add ng-response.convertor.min.js to your main file (index.html).
 
 2. Set `ng-response-convertor` as a dependency in your module
-  ```javascript
-  var myapp = angular.module('myapp', ['ng-response-convertor'])
-  ```
+```javascript
+var myapp = angular.module('myapp', ['ng-response-convertor'])
+```
 
 3. Now the ng-response-convertor services are available to be injected into any controller, service, or factory.:
-  ```javascript
-  app.controller("SampleCtrl", function($scope, ng-response-convertor) {
-    
-  });
-  ```
+```javascript
+app.controller("SampleCtrl", function($scope, ngResponseConvertor) {
+var _data = {}; 
+// data can be object or array
+var data = {
+  'a': 'content of aqua',
+  'b': {
+        'c' : 'content of alfa',
+        'd' : 'content of beta'
+  }
+};
+var model = {
+  'a': {'field': 'aqua'},
+  'b': {
+        'field': 'bambou',
+        'object': {
+          'a': { 'field': 'alfa' },
+          'b': { 'field': 'beta' }
+         }
+  };
+  _data = ngResponseConvertor.change(data, model);
+});
+```
+
+4. Result
+```json
+_data: {
+  'aqua': 'content of aqua',
+  'bambou': {
+        'alfa': 'content of alfa',
+        'beta': 'content of beta'
+      }
+}
+```
