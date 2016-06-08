@@ -1,0 +1,34 @@
+{
+  "name": "ng-response-convertor",
+  "version": "0.0.1",
+  "authors": [
+    "scahitdemir (https://github.com/scahitdemir)"
+  ],
+  "homepage": "https://github.com/scahitdemir/ng-response-convertor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scahitdemir/ng-response-convertor.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "api",
+    "response",
+    "convertor"
+  ],
+  "ignore": [
+    "**/*",
+    "!dist/*.js",
+    "!README.md",
+    "!LICENSE"
+  ],
+  "main": "dist/ng-response-convertor.min.js",
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-sanitize": "^1.4.0"
+  }
+}
+
+
+
