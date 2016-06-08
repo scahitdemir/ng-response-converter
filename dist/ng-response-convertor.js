@@ -3,7 +3,7 @@
 
   var moduleResponseConvertor = angular.module('ng-response-convertor', []);
 
-  moduleResponseConvertor.service('ng-response-convertor', function () {
+  moduleResponseConvertor.service('ngResponseConvertor', function () {
 
     var _model = {};
 
@@ -23,8 +23,7 @@
       else {
         _data = allKeysChange(data.response);
       }
-
-      log(2, "Re-change time: " + (new Date().getTime() - convertTime) + "ms");
+      
       return _data;
     }
 

@@ -1,12 +1,12 @@
 {
   "name": "ng-response-convertor",
   "description": "Shortened field names which sent by backend are being converted to original names according to specified directory.",
-  "version": "0.0.1",
+  "version": "0.1",
   "author": "scahitdemir (https://github.com/scahitdemir)",
   "homepage": "https://github.com/scahitdemir/ng-response-convertor",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scahitdemir/ng-response-convertor.git"
+    "url": "git+https://github.com/scahitdemir/ng-response-convertor.git"
   },
   "bugs": {
     "url": "https://github.com/scahitdemir/ng-response-convertor/issues"
@@ -60,5 +60,8 @@
       "dist/ng-response-convertor.min.js",
       "dist/ng-response-convertor.js"
     ]
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }

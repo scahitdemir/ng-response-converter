@@ -46,7 +46,8 @@ var model = {
           'a': { 'field': 'alfa' },
           'b': { 'field': 'beta' }
          }
-  };
+      }
+};
   _data = ngResponseConvertor.change(data, model);
 });
 ```
