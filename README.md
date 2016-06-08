@@ -33,10 +33,11 @@ var _data = {};
 var data = {
   'a': 'content of aqua',
   'b': {
-        'c' : 'content of alfa',
-        'd' : 'content of beta'
+        'a' : 'content of alfa',
+        'b' : 'content of beta'
   }
 };
+//Model must be like that:
 var model = {
   'a': {'field': 'aqua'},
   'b': {
@@ -51,7 +52,7 @@ var model = {
 ```
 
 4. Result
-```json
+```javascript
 _data: {
   'aqua': 'content of aqua',
   'bambou': {

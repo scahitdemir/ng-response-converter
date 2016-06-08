@@ -23,8 +23,7 @@
       else {
         _data = allKeysChange(data.response);
       }
-
-      log(2, "Re-change time: " + (new Date().getTime() - convertTime) + "ms");
+      
       return _data;
     }
 
