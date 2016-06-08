@@ -18,14 +18,14 @@ $ bower install ng-response-convertor --save
 ```
 
 ## Inject the Ng-Response-Convertor Services
-1. Add ng-response.convertor.min.js to your main file (index.html).
+- Add ng-response.convertor.min.js to your main file (index.html).
 
-2. Set `ng-response-convertor` as a dependency in your module
+- Set `ng-response-convertor` as a dependency in your module
 ```javascript
 var myapp = angular.module('myapp', ['ng-response-convertor'])
 ```
 
-3. Now the ng-response-convertor services are available to be injected into any controller, service, or factory.:
+- Now the ng-response-convertor services are available to be injected into any controller, service, or factory.:
 ```javascript
 app.controller("SampleCtrl", function($scope, ngResponseConvertor) {
 var _data = {}; 
@@ -51,7 +51,7 @@ var model = {
 });
 ```
 
-4. Result
+- Result
 ```javascript
 _data: {
   'aqua': 'content of aqua',
