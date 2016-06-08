@@ -1,33 +1,33 @@
-# Ng-Response-Convertor
+# Ng-Response-Converter
 
 This angular service, shortened field names which sent by backend are being converted to original names according to specified directory.
 
-## Download Ng-Response-Convertor
+## Download Ng-Response-Converter
 
-You can install ng-response-convertor via npm and Bower and its dependencies will be downloaded
+You can install ng-response-converter via npm and Bower and its dependencies will be downloaded
 automatically:
 
 #### Npm
 ```bash
-$ npm install ng-response-convertor --save
+$ npm install ng-response-converter --save
 ```
 
 #### Bower
 ```bash
-$ bower install ng-response-convertor --save
+$ bower install ng-response-converter --save
 ```
 
-## Inject the Ng-Response-Convertor Services
-- Add ng-response.convertor.min.js to your main file (index.html).
+## Inject the Ng-Response-Converter Services
+- Add ng-response.converter.min.js to your main file (index.html).
 
-- Set `ng-response-convertor` as a dependency in your module
+- Set `ng-response-converter` as a dependency in your module
 ```javascript
-var myapp = angular.module('myapp', ['ng-response-convertor'])
+var myapp = angular.module('myapp', ['ng-response-converter'])
 ```
 
-- Now the ng-response-convertor services are available to be injected into any controller, service, or factory.:
+- Now the ng-response-converter services are available to be injected into any controller, service, or factory.:
 ```javascript
-app.controller("SampleCtrl", function($scope, ngResponseConvertor) {
+app.controller("SampleCtrl", function($scope, ngResponseConverter) {
 var _data = {}; 
 // data can be object or array
 var data = {
@@ -48,7 +48,7 @@ var model = {
          }
       }
 };
-  _data = ngResponseConvertor.change(data, model);
+  _data = ngResponseConverter.change(data, model);
 });
 ```
 

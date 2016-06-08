@@ -1,9 +1,9 @@
 (function () {
   'use strict';
 
-  var moduleResponseConvertor = angular.module('ng-response-convertor', []);
+  var moduleResponseConverter = angular.module('ng-response-converter', []);
 
-  moduleResponseConvertor.service('ngResponseConvertor', function () {
+  moduleResponseConverter.service('ngResponseConverter', function () {
 
     var _model = {};
 
