@@ -1,12 +1,33 @@
 # ng-response-convertor
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+This angular service, shortened field names which sent by backend are being converted to original names according to specified directory.
 
-## Build & development
+## Download Ng-Response-Convertor
 
-Run `grunt` for building and `grunt serve` for preview.
+You can install ng-response-convertor via npm and Bower and its dependencies will be downloaded
+automatically:
 
-## Testing
+#### Npm
+```bash
+$ npm install ng-response-convertor --save
+```
 
-Running `grunt test` will run the unit tests with karma.
+#### Bower
+```bash
+$ bower install ng-response-convertor --save
+```
+
+## Inject the Ng-Response-Convertor Services
+1. Add ng-response.convertor.min.js to your main file (index.html).
+
+2. Set `ng-response-convertor` as a dependency in your module
+  ```javascript
+  var myapp = angular.module('myapp', ['ng-response-convertor'])
+  ```
+
+3. Now the ng-response-convertor services are available to be injected into any controller, service, or factory.:
+  ```javascript
+  app.controller("SampleCtrl", function($scope, ng-response-convertor) {
+    
+  });
+  ```
