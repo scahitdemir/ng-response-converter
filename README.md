@@ -28,37 +28,93 @@ var myapp = angular.module('myapp', ['ng-response-converter'])
 - Now the ng-response-converter services are available to be injected into any controller, service, or factory.:
 ```javascript
 app.controller("SampleCtrl", function($scope, ngResponseConverter) {
-var _data = {}; 
+$scope._data = []; //or {}; 
 // data can be object or array
-var data = {
-  'a': 'content of aqua',
-  'b': {
-        'a' : 'content of alfa',
-        'b' : 'content of beta'
-  }
-};
-//Model must be like that:
-var model = {
-  'a': {'field': 'aqua'},
-  'b': {
+    var data = [
+      {
+        'a': 'content of aqua',
+        'b': [
+          {
+            'c' : {
+              'e': 'content of gama'
+            },
+            'd' : 'content of beta'
+          },
+          {
+            'c' : {
+              'e': 'content of gama'
+            },
+            'd' : 'content of beta'
+          }
+        ]
+      },
+      {
+        'a': 'content of aqua',
+        'b': [
+          {
+            'c' : {
+              'e': 'content of gama'
+            },
+            'd' : 'content of beta'
+          },
+          {
+            'c' : {
+              'e': 'content of gama'
+            },
+            'd' : 'content of beta'
+          }
+        ]
+      }
+    ];
+//Dictionary must be like that:
+    var dictionary = {
+      'a': {'field': 'aqua'},
+      'b': {
         'field': 'bambou',
         'object': {
-          'a': { 'field': 'alfa' },
-          'b': { 'field': 'beta' }
-         }
+          'c': {
+            'field': 'alfa',
+            'object': {
+              'e': {'field': 'gama'}
+            }
+          },
+          'd': {'field': 'beta'}
+        }
       }
-};
-  _data = ngResponseConverter.change(data, model);
+    };
+  $scope._data = ngResponseConverter.change(data, dictionary);
 });
 ```
 
 - Result
 ```javascript
-_data: {
-  'aqua': 'content of aqua',
-  'bambou': {
-        'alfa': 'content of alfa',
-        'beta': 'content of beta'
-      }
-}
+_data: [{
+             'aqua': 'content of aqua',
+             'bambou': [{
+               'alfa': {
+                 'gama': 'content of gama'
+               },
+               'beta': 'content of beta'
+             },
+             {
+               'alfa': {
+                  'gama': 'content of gama'
+                },
+                'beta': 'content of beta'
+              }]
+           },
+           {
+             'aqua': 'content of aqua',
+             'bambou': [{
+               'alfa': {
+                 'gama': 'content of gama'
+               },
+               'beta': 'content of beta'
+             },
+             {
+               'alfa': {
+                  'gama': 'content of gama'
+                },
+                'beta': 'content of beta'
+           }]
 ```
